@@ -59,7 +59,7 @@ public class StartApp {
     public static void cadastroPlayer() {
         System.out.println("Você escolheu a opção cadastro de Player");
 
-        // Aprece a primeira pagina para guardar as informaçoes
+        // Aparece a primeira pagina para guardar as informaçoes
         menuPlayer();
 
         Player player = new Player();
@@ -195,7 +195,7 @@ public class StartApp {
         sc.nextLine();
 
 
-        for (int i = 0; i < filmeList.size(); i++) {
+      /*  for (int i = 0; i < filmeList.size(); i++) {
             Filme filme2 = filmeList.get(i);
             if (filme2 != null) {
                 System.out.println("Titulo (Filme): " + filme2.getTitulo());
@@ -219,7 +219,7 @@ public class StartApp {
                 System.out.println("Classificação Etaria: " + serie2.getClasEtaria());
                 System.out.println("Plataforma: " + serie2.getPlataforma());
             }
-        }
+        }*/
 
         continuar();
 
