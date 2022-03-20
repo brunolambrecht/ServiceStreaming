@@ -8,6 +8,8 @@ import static br.edu.univas.main.Menu.*;
 
 public class StartApp {
 
+    ///teste
+
     private static Scanner sc = new Scanner(System.in);
 
     private static ArrayList<Player> playerList = new ArrayList<>();
