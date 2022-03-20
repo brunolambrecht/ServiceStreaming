@@ -8,11 +8,6 @@ import static br.edu.univas.main.Menu.*;
 
 public class StartApp {
 
-    ///teste ronald silvaaaaaa
-    // Ronald Pereira da Silva
-    //teste 2 Bruno
-
-
     private static Scanner sc = new Scanner(System.in);
 
     private static ArrayList<Player> playerList = new ArrayList<>();
