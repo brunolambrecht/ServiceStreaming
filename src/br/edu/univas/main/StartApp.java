@@ -96,7 +96,7 @@ public class StartApp {
 
     }
 
-    // Cadastra o tipo (No cadastro de Titulo)
+    // Cadastra o titulo classificado por tipo (No cadastro de Titulo)
     public static void tipo() {
         System.out.println("Você escolheu a opção Cadastro de Titulo");
         menuDeTitulo();
@@ -224,6 +224,13 @@ public class StartApp {
         continuar();
 
     }
+    //Faz a pesquisa e recomenda titulo
+    public static void demonstraTitulo(){
+        pesquisaTitulo();
+
+    }
+
+
 }
 
 
@@ -234,27 +241,3 @@ public class StartApp {
         return aux;
 
         }*/
-
-
-
-
-
-
-
-   /* //1 - Cadastro de Player
-    String nome;
-        System.out.println("Digite o nome do Streamer!");
-                nome = sc.nextLine();
-
-
-                ArrayList<Player> playerList = new ArrayList<>();
-
-        for (int i = 0; i < playerList.size(); i++) {
-        Player player = playerList.get(i);
-        if (player != null) {
-        System.out.println("Nome: " + player.getName());
-        System.out.println("Site: " + player.getSite());
-        }
-        }
-
-    */
