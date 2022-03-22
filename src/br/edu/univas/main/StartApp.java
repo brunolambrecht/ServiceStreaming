@@ -33,7 +33,7 @@ public class StartApp {
                     break;
 
                 case 3:
-                    pesquisaTitulo();
+                    demonstraTitulo();
                     break;
 
 
@@ -54,6 +54,7 @@ public class StartApp {
         scContinuar.nextLine();
 
     }
+
 
     // Cadastra os Players
     public static void cadastroPlayer() {
@@ -95,6 +96,7 @@ public class StartApp {
         sc.nextLine();
 
     }
+
 
     // Cadastra o titulo classificado por tipo (No cadastro de Titulo)
     public static void tipo() {
@@ -224,10 +226,40 @@ public class StartApp {
         continuar();
 
     }
+
+
+
     //Faz a pesquisa e recomenda titulo
     public static void demonstraTitulo(){
         pesquisaTitulo();
 
+        int opcaoTitulo;
+        opcaoTitulo = sc.nextInt();
+        if(opcaoTitulo == 1){
+            pesquisa();
+
+
+        }
+
+        else if (opcaoTitulo == 2){
+            recomendacaoGenero();
+
+
+        }
+
+        else if (opcaoTitulo == 3){
+            recomendacaoAleatoria();
+            filmeList.get(1).getStatus
+
+
+        }
+
+        else {
+            System.out.println("\uD83D\uDEABOpção invalida!\uD83D\uDEAB");
+            System.out.println("Pressione a tecla ENTER para voltar ao menu");
+
+        }
+        sc.nextLine();
     }
 
 

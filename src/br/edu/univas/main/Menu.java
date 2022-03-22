@@ -88,4 +88,15 @@ public class Menu {
     public static void plataforma() {
         System.out.println(" Selecione umas das Plataforma que o titulo esta disponivel:");
     }
+
+    public static void pesquisa(){
+        System.out.println("Faça a sua pesquisa:");
+    }
+    public static void recomendacaoGenero(){
+        System.out.println("Sua recomendação por Genero é:");
+    }
+    public static void recomendacaoAleatoria(){
+        System.out.println("Sua recomendação Aleatoria é:");
+    }
+
 }
