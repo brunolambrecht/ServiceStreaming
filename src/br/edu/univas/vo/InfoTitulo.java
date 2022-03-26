@@ -1,5 +1,7 @@
 package br.edu.univas.vo;
 
+import java.util.Objects;
+
 public class InfoTitulo {
 
     private String titulo;
@@ -65,5 +67,18 @@ public class InfoTitulo {
 
     public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof InfoTitulo)) return false;
+        InfoTitulo that = (InfoTitulo) o;
+        return Objects.equals(titulo, that.titulo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(titulo);
     }
 }

@@ -21,4 +21,6 @@ public class Player {
     public void setSite(String site) {
         this.site = site;
     }
+
+
 }

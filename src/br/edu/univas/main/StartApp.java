@@ -238,6 +238,14 @@ public class StartApp {
         if(opcaoTitulo == 1){
             pesquisa();
 
+            sc.nextLine();
+            String pesquisa = sc.nextLine();
+            if(filmeList.contains(pesquisa)) {
+                System.out.println("Pessoa já existe na lista");
+            } else {
+                System.out.println("Pessoa não existe na lista");
+            }
+
 
         }
 
@@ -249,7 +257,7 @@ public class StartApp {
 
         else if (opcaoTitulo == 3){
             recomendacaoAleatoria();
-            filmeList.get(1).getStatus
+           // filmeList.get(1).getStatus
 
 
         }
