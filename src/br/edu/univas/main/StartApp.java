@@ -10,6 +10,8 @@ public class StartApp {
 
     private static Scanner sc = new Scanner(System.in);
 
+    //Ronald Silva
+
     private static ArrayList<Player> playerList = new ArrayList<>();
     private static ArrayList<Filme> filmeList = new ArrayList<>();
     private static ArrayList<Serie> serieList = new ArrayList<>();
