@@ -285,5 +285,5 @@ public class StartApp {
 /*-public static String leitorString(Scanner x){
         String aux = x.nextLine();
         return aux;
-    .
+
         }*/
