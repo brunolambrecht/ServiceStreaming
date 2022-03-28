@@ -237,15 +237,21 @@ public class StartApp {
         opcaoTitulo = sc.nextInt();
         if(opcaoTitulo == 1){
             pesquisa();
-
             sc.nextLine();
-            String pesquisa = sc.nextLine();
-            if(filmeList.contains(pesquisa)) {
-                System.out.println("Pessoa já existe na lista");
-            } else {
-                System.out.println("Pessoa não existe na lista");
+            //entradas com um determinado nº de fax
+            String fax = sc.nextLine();//nº de faz escolhido
+            System.out.println("---------------------");
+            System.out.println("\nEntradas com um determinado nº de fax");
+            for (Object obj : filmeList) {
+                if (obj instanceof Filme) {//verifica se o objeto é uma instância da classe Filme
+                    Filme emp = (Filme)obj;//aqui é feito um cast
+                    if (emp.getTitulo().equals(fax)) {//verifica se o fax é o procurado
+                        System.out.println("Entrada encontrada:\n" + obj);
+                    } else {
+                        System.out.println("Entrada não encontrada");
+                    }
+                }
             }
-
 
         }
 
