@@ -55,7 +55,6 @@ public class StartApp {
 
     }
 
-
     // Cadastra os Players
     public static void cadastroPlayer() {
         System.out.println("Você escolheu a opção cadastro de Player");
@@ -230,44 +229,126 @@ public class StartApp {
 
 
     //Faz a pesquisa e recomenda titulo
-    public static void demonstraTitulo(){
-        pesquisaTitulo();
-
+    public static void pesquisaTituloOpcao() {
         int opcaoTitulo;
         opcaoTitulo = sc.nextInt();
-        if(opcaoTitulo == 1){
+        if(opcaoTitulo == 1) {
+            System.out.println("Você selecionou a opção serie!\n");
             pesquisa();
             sc.nextLine();
-            //entradas com um determinado nº de fax
-            String fax = sc.nextLine();//nº de faz escolhido
+            //entradas com um determinado titulo
+            String entradaTitulo = sc.nextLine();//titulo escolhido
             System.out.println("---------------------");
-            System.out.println("\nEntradas com um determinado nº de fax");
+            System.out.println("\nEntradas com um determinado titulo");
+            for (Object obj : serieList) {
+                if (obj instanceof Serie) {//verifica se o objeto é uma instância da classe Serie
+                    Serie emp = (Serie)obj;//aqui é feito um cast
+                    if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
+                        System.out.println("Titulo encontrado: " + obj);
+                    } else {
+                        System.out.println("Titulo não encontrado");
+                    }
+                }
+            }
+
+        }else if (opcaoTitulo == 2) {
+            System.out.println("Você selecionou a opção filme!\n");
+            pesquisa();
+            sc.nextLine();
+            //entradas com um determinado titulo
+            String entradaTitulo = sc.nextLine();// titulo escolhido
+            System.out.println("---------------------");
+            System.out.println("\nEntradas com um determinado titulo");
             for (Object obj : filmeList) {
                 if (obj instanceof Filme) {//verifica se o objeto é uma instância da classe Filme
                     Filme emp = (Filme)obj;//aqui é feito um cast
-                    if (emp.getTitulo().equals(fax)) {//verifica se o fax é o procurado
-                        System.out.println("Entrada encontrada:\n" + obj);
+                    if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
+                        System.out.println("Titulo encontrado: " + obj);
                     } else {
-                        System.out.println("Entrada não encontrada");
+                        System.out.println("Titulo não encontrado");
                     }
                 }
             }
 
         }
 
-        else if (opcaoTitulo == 2){
-            recomendacaoGenero();
+    }
 
+    //Pesquisa um titulo atravez do genero
+    public static void tituloGenero(){
+        int opcaoTitulo;
+        opcaoTitulo = sc.nextInt();
+        if(opcaoTitulo == 1) {
+            System.out.println("Você selecionou a opção serie!\n");
+            pesquisa();
+            sc.nextLine();
+            //entradas com um determinado titulo
+            String entradaTitulo = sc.nextLine();//titulo escolhido
+            System.out.println("---------------------");
+            System.out.println("\nEntradas com um determinado titulo");
+            for (Object obj : serieList) {
+                if (obj instanceof Serie) {//verifica se o objeto é uma instância da classe Serie
+                    Serie emp = (Serie)obj;//aqui é feito um cast
+                    if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
+                        System.out.println("Titulo encontrado: " + obj);
+                    } else {
+                        System.out.println("Titulo não encontrado");
+                    }
+                }
+            }
+
+        }
+        else if(opcaoTitulo == 2){
+            System.out.println("Você selecionou a opção filme!\n");
+            pesquisa();
+            sc.nextLine();
+            //entradas com um determinado titulo
+            String entradaTitulo = sc.nextLine();// titulo escolhido
+            System.out.println("---------------------");
+            System.out.println("\nEntradas com um determinado titulo");
+            for (Object obj : filmeList) {
+                if (obj instanceof Filme) {//verifica se o objeto é uma instância da classe Filme
+                    Filme emp = (Filme)obj;//aqui é feito um cast
+                    if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
+                        System.out.println("Titulo encontrado: " + obj);
+                    } else {
+                        System.out.println("Titulo não encontrado");
+                    }
+                }
+            }
 
         }
 
+    }
+
+    //Opções de pesquisa
+    public static void demonstraTitulo(){
+        pesquisaTitulo();
+        int opcaoTitulo;
+        opcaoTitulo = sc.nextInt();
+        //Procura por um determinado titulo
+        if(opcaoTitulo == 1) {
+
+            menuDeTitulo();
+
+            pesquisaTituloOpcao();
+        }
+
+        //Recomenda um titulo atravez do genero selecionado
+        else if (opcaoTitulo == 2){
+            recomendacaoGenero();
+
+            tituloGenero();
+        }
+
+        //Recomenda um titulo aleatório
         else if (opcaoTitulo == 3){
             recomendacaoAleatoria();
            // filmeList.get(1).getStatus
 
 
         }
-
+        //Opção invalida
         else {
             System.out.println("\uD83D\uDEABOpção invalida!\uD83D\uDEAB");
             System.out.println("Pressione a tecla ENTER para voltar ao menu");
@@ -278,12 +359,3 @@ public class StartApp {
 
 
 }
-
-
-
-
-/*-public static String leitorString(Scanner x){
-        String aux = x.nextLine();
-        return aux;
-
-        }*/
