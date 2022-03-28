@@ -228,7 +228,7 @@ public class StartApp {
 
 
 
-    //Faz a pesquisa e recomenda titulo
+    //Faz a pesquisa e demonstra titulo
     public static void pesquisaTituloOpcao() {
         int opcaoTitulo;
         opcaoTitulo = sc.nextInt();
@@ -244,7 +244,14 @@ public class StartApp {
                 if (obj instanceof Serie) {//verifica se o objeto é uma instância da classe Serie
                     Serie emp = (Serie)obj;//aqui é feito um cast
                     if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
-                        System.out.println("Titulo encontrado: " + obj);
+                        System.out.println("Titulo encontrado:");
+                        System.out.println("Nome do Titulo: " + ((Serie) obj).getTitulo());
+                        System.out.println("Elenco: " + ((Serie) obj).getElenco());
+                        System.out.println("Descrição: " + ((Serie) obj).getDescricao());
+                        System.out.println("Genero: " + ((Serie) obj).getGenero());
+                        System.out.println("Diretor: " + ((Serie) obj).getDiretor());
+                        System.out.println("Classificação etaria: " + ((Serie) obj).getClasEtaria());
+                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Serie) obj).getPlataforma());
                     } else {
                         System.out.println("Titulo não encontrado");
                     }
@@ -263,7 +270,14 @@ public class StartApp {
                 if (obj instanceof Filme) {//verifica se o objeto é uma instância da classe Filme
                     Filme emp = (Filme)obj;//aqui é feito um cast
                     if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
-                        System.out.println("Titulo encontrado: " + obj);
+                        System.out.println("Titulo encontrado:");
+                        System.out.println("Nome do Titulo: " + ((Filme) obj).getTitulo());
+                        System.out.println("Elenco: " + ((Filme) obj).getElenco());
+                        System.out.println("Descrição: " + ((Filme) obj).getDescricao());
+                        System.out.println("Genero: " + ((Filme) obj).getGenero());
+                        System.out.println("Diretor: " + ((Filme) obj).getDiretor());
+                        System.out.println("Classificação etaria: " + ((Filme) obj).getClasEtaria());
+                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Filme) obj).getPlataforma());
                     } else {
                         System.out.println("Titulo não encontrado");
                     }
@@ -290,7 +304,14 @@ public class StartApp {
                 if (obj instanceof Serie) {//verifica se o objeto é uma instância da classe Serie
                     Serie emp = (Serie)obj;//aqui é feito um cast
                     if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
-                        System.out.println("Titulo encontrado: " + obj);
+                        System.out.println("Titulo encontrado:");
+                        System.out.println("Nome do Titulo: " + ((Serie) obj).getTitulo());
+                        System.out.println("Elenco: " + ((Serie) obj).getElenco());
+                        System.out.println("Descrição: " + ((Serie) obj).getDescricao());
+                        System.out.println("Genero: " + ((Serie) obj).getGenero());
+                        System.out.println("Diretor: " + ((Serie) obj).getDiretor());
+                        System.out.println("Classificação etaria: " + ((Serie) obj).getClasEtaria());
+                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Serie) obj).getPlataforma());
                     } else {
                         System.out.println("Titulo não encontrado");
                     }
@@ -310,7 +331,14 @@ public class StartApp {
                 if (obj instanceof Filme) {//verifica se o objeto é uma instância da classe Filme
                     Filme emp = (Filme)obj;//aqui é feito um cast
                     if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
-                        System.out.println("Titulo encontrado: " + obj);
+                        System.out.println("Titulo encontrado:");
+                        System.out.println("Nome do Titulo: " + ((Filme) obj).getTitulo());
+                        System.out.println("Elenco: " + ((Filme) obj).getElenco());
+                        System.out.println("Descrição: " + ((Filme) obj).getDescricao());
+                        System.out.println("Genero: " + ((Filme) obj).getGenero());
+                        System.out.println("Diretor: " + ((Filme) obj).getDiretor());
+                        System.out.println("Classificação etaria: " + ((Filme) obj).getClasEtaria());
+                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Filme) obj).getPlataforma());
                     } else {
                         System.out.println("Titulo não encontrado");
                     }

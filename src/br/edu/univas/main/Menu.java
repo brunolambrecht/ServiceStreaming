@@ -90,7 +90,7 @@ public class Menu {
     }
 
     public static void pesquisa(){
-        System.out.println("Faça a sua pesquisa:");
+        System.out.println("Informe o nome do Titulo:");
     }
     public static void recomendacaoGenero(){
         System.out.println("Sua recomendação por Genero é:");
