@@ -2,6 +2,7 @@ package br.edu.univas.main;
 import br.edu.univas.vo.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 import static br.edu.univas.main.Menu.*;
@@ -296,10 +297,10 @@ public class StartApp {
             System.out.println("Você selecionou a opção serie!\n");
             pesquisa();
             sc.nextLine();
-            //entradas com um determinado titulo
-            String entradaTitulo = sc.nextLine();//titulo escolhido
+            //entradas com um determinado titulo por genero
+            String entradaTitulo = sc.nextLine();//genero escolhido
             System.out.println("---------------------");
-            System.out.println("\nEntradas com um determinado titulo");
+            System.out.println("\nEntradas com um determinado Genero");
             for (Object obj : serieList) {
                 if (obj instanceof Serie) {//verifica se o objeto é uma instância da classe Serie
                     Serie emp = (Serie)obj;//aqui é feito um cast
@@ -323,10 +324,10 @@ public class StartApp {
             System.out.println("Você selecionou a opção filme!\n");
             pesquisa();
             sc.nextLine();
-            //entradas com um determinado titulo
-            String entradaTitulo = sc.nextLine();// titulo escolhido
+            //entradas com um determinado titulo por genero
+            String entradaTitulo = sc.nextLine();// genero escolhido
             System.out.println("---------------------");
-            System.out.println("\nEntradas com um determinado titulo");
+            System.out.println("\nEntradas com um determinado Genero");
             for (Object obj : filmeList) {
                 if (obj instanceof Filme) {//verifica se o objeto é uma instância da classe Filme
                     Filme emp = (Filme)obj;//aqui é feito um cast
@@ -349,6 +350,22 @@ public class StartApp {
 
     }
 
+    public static void tituloAleatorio() {
+        int opcaoTitulo;
+        opcaoTitulo = sc.nextInt();
+        if (opcaoTitulo == 1) {
+            Random r = new Random();
+           // int rdm = serieList.get(r.nextInt(serieList.size()));
+            //Forum para consulta:
+            // https://www.geeksforgeeks.org/getting-random-elements-from-arraylist-in-java/
+
+
+        } else if (opcaoTitulo == 2) {
+
+
+        }
+    }
+
     //Opções de pesquisa
     public static void demonstraTitulo(){
         pesquisaTitulo();
@@ -356,25 +373,22 @@ public class StartApp {
         opcaoTitulo = sc.nextInt();
         //Procura por um determinado titulo
         if(opcaoTitulo == 1) {
-
             menuDeTitulo();
-
             pesquisaTituloOpcao();
         }
 
         //Recomenda um titulo atravez do genero selecionado
         else if (opcaoTitulo == 2){
             recomendacaoGenero();
-
+            menuDeTitulo();
             tituloGenero();
         }
 
         //Recomenda um titulo aleatório
         else if (opcaoTitulo == 3){
+            menuDeTitulo();
             recomendacaoAleatoria();
-           // filmeList.get(1).getStatus
-
-
+            tituloAleatorio();
         }
         //Opção invalida
         else {
