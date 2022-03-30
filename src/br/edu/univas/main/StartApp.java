@@ -272,13 +272,14 @@ public class StartApp {
                     Filme emp = (Filme)obj;//aqui é feito um cast
                     if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
-                        System.out.println("Nome do Titulo: " + ((Filme) obj).getTitulo());
+                        System.out.println(emp);
+                        /*System.out.println("Nome do Titulo: " + ((Filme) obj).getTitulo());
                         System.out.println("Elenco: " + ((Filme) obj).getElenco());
                         System.out.println("Descrição: " + ((Filme) obj).getDescricao());
                         System.out.println("Genero: " + ((Filme) obj).getGenero());
                         System.out.println("Diretor: " + ((Filme) obj).getDiretor());
                         System.out.println("Classificação etaria: " + ((Filme) obj).getClasEtaria());
-                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Filme) obj).getPlataforma());
+                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Filme) obj).getPlataforma());*/
                     } else {
                         System.out.println("Titulo não encontrado");
                     }

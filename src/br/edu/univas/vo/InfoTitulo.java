@@ -72,13 +72,26 @@ public class InfoTitulo {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof InfoTitulo)) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         InfoTitulo that = (InfoTitulo) o;
-        return Objects.equals(titulo, that.titulo);
+        return Objects.equals(titulo, that.titulo) && Objects.equals(genero, that.genero);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(titulo);
+        return Objects.hash(titulo, genero);
+    }
+
+    @Override
+    public String toString() {
+        return "InfoTitulo{" +
+                "titulo='" + titulo + '\'' +
+                "\n elenco='" + elenco + '\'' +
+                "\n descricao='" + descricao + '\'' +
+                "\n genero='" + genero + '\'' +
+                "\n diretor='" + diretor + '\'' +
+                "\n clasEtaria=" + clasEtaria +
+                "\n plataforma='" + plataforma + '\'' +
+                '}';
     }
 }
