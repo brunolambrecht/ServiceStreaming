@@ -84,14 +84,13 @@ public class InfoTitulo {
 
     @Override
     public String toString() {
-        return "InfoTitulo{" +
-                "titulo='" + titulo + '\'' +
-                "\n elenco='" + elenco + '\'' +
-                "\n descricao='" + descricao + '\'' +
-                "\n genero='" + genero + '\'' +
-                "\n diretor='" + diretor + '\'' +
-                "\n clasEtaria=" + clasEtaria +
-                "\n plataforma='" + plataforma + '\'' +
-                '}';
+        return
+                "\n Titulo: " + titulo +
+                "\n Elenco: " + elenco +
+                "\n Descricao: " + descricao +
+                "\n Genero: " + genero +
+                "\n Diretor: " + diretor +
+                "\n Clasificação Etaria :" + clasEtaria +
+                "\n Plataforma : " + plataforma;
     }
 }

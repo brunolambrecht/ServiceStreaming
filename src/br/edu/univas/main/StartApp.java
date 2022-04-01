@@ -134,18 +134,7 @@ public class StartApp {
 
             serieList.add(serie);
 
-            for (int i = 0; i < serieList.size(); i++) {
-                Serie serie2 = serieList.get(i);
-                if (serie2 != null) {
-                    System.out.println("Titulo (Serie): " + serie2.getTitulo());
-                    System.out.println("Elenco: " + serie2.getElenco());
-                    System.out.println("Descrição: " + serie2.getDescricao());
-                    System.out.println("Genero: " + serie2.getGenero());
-                    System.out.println("Diretor: " + serie2.getDiretor());
-                    System.out.println("Classificação Etaria: " + serie2.getClasEtaria());
-                    System.out.println("Plataforma: " + serie2.getPlataforma());
-                }
-            }
+            System.out.println(serie);
 
         } else if (opcaoTitulo2 == 2) {
             sc.nextLine();
@@ -176,18 +165,7 @@ public class StartApp {
 
             filmeList.add(filme);
 
-            for (int i = 0; i < filmeList.size(); i++) {
-                Filme filme2 = filmeList.get(i);
-                if (filme2 != null) {
-                    System.out.println("Titulo (Filme): " + filme2.getTitulo());
-                    System.out.println("Elenco: " + filme2.getElenco());
-                    System.out.println("Descrição: " + filme2.getDescricao());
-                    System.out.println("Genero: " + filme2.getGenero());
-                    System.out.println("Diretor: " + filme2.getDiretor());
-                    System.out.println("Classificação Etaria: " + filme2.getClasEtaria());
-                    System.out.println("Plataforma: " + filme2.getPlataforma());
-                }
-            }
+            System.out.println(filme);
 
         } else {
             System.out.println("\uD83D\uDEABOpção invalida!\uD83D\uDEAB");
@@ -195,36 +173,7 @@ public class StartApp {
 
         }
         sc.nextLine();
-
-
-      /*  for (int i = 0; i < filmeList.size(); i++) {
-            Filme filme2 = filmeList.get(i);
-            if (filme2 != null) {
-                System.out.println("Titulo (Filme): " + filme2.getTitulo());
-                System.out.println("Elenco: " + filme2.getElenco());
-                System.out.println("Descrição: " + filme2.getDescricao());
-                System.out.println("Genero: " + filme2.getGenero());
-                System.out.println("Diretor: " + filme2.getDiretor());
-                System.out.println("Classificação Etaria: " + filme2.getClasEtaria());
-                System.out.println("Plataforma: " + filme2.getPlataforma());
-            }
-        }
-
-        for (int i = 0; i < serieList.size(); i++) {
-            Serie serie2 = serieList.get(i);
-            if (serie2 != null) {
-                System.out.println("Titulo (Serie): " + serie2.getTitulo());
-                System.out.println("Elenco: " + serie2.getElenco());
-                System.out.println("Descrição: " + serie2.getDescricao());
-                System.out.println("Genero: " + serie2.getGenero());
-                System.out.println("Diretor: " + serie2.getDiretor());
-                System.out.println("Classificação Etaria: " + serie2.getClasEtaria());
-                System.out.println("Plataforma: " + serie2.getPlataforma());
-            }
-        }*/
-
         continuar();
-
     }
 
 
@@ -246,15 +195,11 @@ public class StartApp {
                     Serie emp = (Serie)obj;//aqui é feito um cast
                     if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
-                        System.out.println("Nome do Titulo: " + ((Serie) obj).getTitulo());
-                        System.out.println("Elenco: " + ((Serie) obj).getElenco());
-                        System.out.println("Descrição: " + ((Serie) obj).getDescricao());
-                        System.out.println("Genero: " + ((Serie) obj).getGenero());
-                        System.out.println("Diretor: " + ((Serie) obj).getDiretor());
-                        System.out.println("Classificação etaria: " + ((Serie) obj).getClasEtaria());
-                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Serie) obj).getPlataforma());
+                        System.out.println(emp);
+                        break;
                     } else {
                         System.out.println("Titulo não encontrado");
+                        break;
                     }
                 }
             }
@@ -273,15 +218,10 @@ public class StartApp {
                     if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
                         System.out.println(emp);
-                        /*System.out.println("Nome do Titulo: " + ((Filme) obj).getTitulo());
-                        System.out.println("Elenco: " + ((Filme) obj).getElenco());
-                        System.out.println("Descrição: " + ((Filme) obj).getDescricao());
-                        System.out.println("Genero: " + ((Filme) obj).getGenero());
-                        System.out.println("Diretor: " + ((Filme) obj).getDiretor());
-                        System.out.println("Classificação etaria: " + ((Filme) obj).getClasEtaria());
-                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Filme) obj).getPlataforma());*/
+                        break;
                     } else {
                         System.out.println("Titulo não encontrado");
+                        break;
                     }
                 }
             }
@@ -296,7 +236,7 @@ public class StartApp {
         opcaoTitulo = sc.nextInt();
         if(opcaoTitulo == 1) {
             System.out.println("Você selecionou a opção serie!\n");
-            pesquisa();
+            System.out.println("Informe o genero!");
             sc.nextLine();
             //entradas com um determinado titulo por genero
             String entradaTitulo = sc.nextLine();//genero escolhido
@@ -307,15 +247,11 @@ public class StartApp {
                     Serie emp = (Serie)obj;//aqui é feito um cast
                     if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
-                        System.out.println("Nome do Titulo: " + ((Serie) obj).getTitulo());
-                        System.out.println("Elenco: " + ((Serie) obj).getElenco());
-                        System.out.println("Descrição: " + ((Serie) obj).getDescricao());
-                        System.out.println("Genero: " + ((Serie) obj).getGenero());
-                        System.out.println("Diretor: " + ((Serie) obj).getDiretor());
-                        System.out.println("Classificação etaria: " + ((Serie) obj).getClasEtaria());
-                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Serie) obj).getPlataforma());
+                        System.out.println(emp);
+                        break;
                     } else {
                         System.out.println("Titulo não encontrado");
+                        break;
                     }
                 }
             }
@@ -323,7 +259,7 @@ public class StartApp {
         }
         else if(opcaoTitulo == 2){
             System.out.println("Você selecionou a opção filme!\n");
-            pesquisa();
+            System.out.println("Informe o genero!");
             sc.nextLine();
             //entradas com um determinado titulo por genero
             String entradaTitulo = sc.nextLine();// genero escolhido
@@ -334,15 +270,11 @@ public class StartApp {
                     Filme emp = (Filme)obj;//aqui é feito um cast
                     if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
-                        System.out.println("Nome do Titulo: " + ((Filme) obj).getTitulo());
-                        System.out.println("Elenco: " + ((Filme) obj).getElenco());
-                        System.out.println("Descrição: " + ((Filme) obj).getDescricao());
-                        System.out.println("Genero: " + ((Filme) obj).getGenero());
-                        System.out.println("Diretor: " + ((Filme) obj).getDiretor());
-                        System.out.println("Classificação etaria: " + ((Filme) obj).getClasEtaria());
-                        System.out.println("Plataforma em que o titulo esta disponivel: " + ((Filme) obj).getPlataforma());
+                        System.out.println(emp);
+                        break;
                     } else {
                         System.out.println("Titulo não encontrado");
+                        break;
                     }
                 }
             }
@@ -399,6 +331,4 @@ public class StartApp {
         }
         sc.nextLine();
     }
-
-
 }
