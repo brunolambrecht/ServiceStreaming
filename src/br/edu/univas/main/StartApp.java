@@ -197,9 +197,6 @@ public class StartApp {
                         System.out.println("Titulo encontrado:");
                         System.out.println(emp);
                         break;
-                    } else {
-                        System.out.println("Titulo não encontrado");
-                        break;
                     }
                 }
             }
@@ -218,9 +215,6 @@ public class StartApp {
                     if (emp.getTitulo().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
                         System.out.println(emp);
-                        break;
-                    } else {
-                        System.out.println("Titulo não encontrado");
                         break;
                     }
                 }
@@ -249,9 +243,6 @@ public class StartApp {
                         System.out.println("Titulo encontrado:");
                         System.out.println(emp);
                         break;
-                    } else {
-                        System.out.println("Titulo não encontrado");
-                        break;
                     }
                 }
             }
@@ -271,9 +262,6 @@ public class StartApp {
                     if (emp.getGenero().equals(entradaTitulo)) {//verifica se o titulo é o procurado
                         System.out.println("Titulo encontrado:");
                         System.out.println(emp);
-                        break;
-                    } else {
-                        System.out.println("Titulo não encontrado");
                         break;
                     }
                 }
