@@ -275,15 +275,22 @@ public class StartApp {
         int opcaoTitulo;
         opcaoTitulo = sc.nextInt();
         if (opcaoTitulo == 1) {
-            Random r = new Random();
-           // int rdm = serieList.get(r.nextInt(serieList.size()));
-            //Forum para consulta:
-            // https://www.geeksforgeeks.org/getting-random-elements-from-arraylist-in-java/
-
+            Random random = new Random();
+            for (int i = 0; i < serieList.size(); i++){
+                int index = random.nextInt(serieList.size());
+                System.out.println(serieList.get(index));
+                break;
+            }
+            continuar();
 
         } else if (opcaoTitulo == 2) {
-
-
+            Random random = new Random();
+            for (int i = 0; i < filmeList.size(); i++){
+                int index = random.nextInt(filmeList.size());
+                System.out.println(filmeList.get(index));
+                break;
+            }
+            continuar();
         }
     }
 
