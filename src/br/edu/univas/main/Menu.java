@@ -86,7 +86,7 @@ public class Menu {
         System.out.println("Escreva a Classificação Etária:");}
 
     public static void plataforma() {
-        System.out.println(" Selecione umas das Plataforma que o titulo esta disponivel:");
+        System.out.println("Informe as Plataformas em que o titulo esta disponivel:");
     }
 
     public static void pesquisa(){

@@ -1,3 +1,7 @@
+//Alunos:
+//Bruno Lambrecht
+//Ronald Pereira
+
 package br.edu.univas.main;
 import br.edu.univas.vo.*;
 
@@ -105,6 +109,7 @@ public class StartApp {
 
         int opcaoTitulo2;
         opcaoTitulo2 = sc.nextInt();
+        //Serie
         if (opcaoTitulo2 == 1) {
             sc.nextLine();
             System.out.println("Você escolheu a opção Serie!");
@@ -128,15 +133,26 @@ public class StartApp {
             clasEtaria();
             int f = sc.nextInt();
             serie.setClasEtaria(f);
+            sc.nextLine();
             plataforma();
+            System.out.println("Plataformas disponiveis:");
+            for (int i = 0; i < playerList.size(); i++) {
+                Player player2 = playerList.get(i);
+                if (player2 != null) {
+                    System.out.println("Nome: " + player2.getName());
+                }
+            }
+            System.out.println("\nInforme a plataforma!");
             String g = sc.nextLine();
             serie.setPlataforma(g);
-
+            System.out.println("\nTitulo cadastrado!\n");
             serieList.add(serie);
 
             System.out.println(serie);
 
-        } else if (opcaoTitulo2 == 2) {
+        }
+        //Filme
+        else if (opcaoTitulo2 == 2) {
             sc.nextLine();
             System.out.println("Você escolheu a opção Filme!");
 
@@ -159,12 +175,20 @@ public class StartApp {
             clasEtaria();
             int f = sc.nextInt();
             filme.setClasEtaria(f);
+            sc.nextLine();
             plataforma();
+            System.out.println("Plataformas disponiveis:");
+            for (int i = 0; i < playerList.size(); i++) {
+                Player player2 = playerList.get(i);
+                if (player2 != null) {
+                    System.out.println("Nome: " + player2.getName());
+                }
+            }
+            System.out.println("\nInforme a plataforma!");
             String g = sc.nextLine();
             filme.setPlataforma(g);
-
             filmeList.add(filme);
-
+            System.out.println("\nTitulo cadastrado!\n");
             System.out.println(filme);
 
         } else {
@@ -177,11 +201,11 @@ public class StartApp {
     }
 
 
-
     //Faz a pesquisa e demonstra titulo
     public static void pesquisaTituloOpcao() {
         int opcaoTitulo;
         opcaoTitulo = sc.nextInt();
+        //Serie
         if(opcaoTitulo == 1) {
             System.out.println("Você selecionou a opção serie!\n");
             pesquisa();
@@ -200,8 +224,10 @@ public class StartApp {
                     }
                 }
             }
-
-        }else if (opcaoTitulo == 2) {
+            continuar();
+        }
+        //Filme
+        else if (opcaoTitulo == 2) {
             System.out.println("Você selecionou a opção filme!\n");
             pesquisa();
             sc.nextLine();
@@ -219,7 +245,7 @@ public class StartApp {
                     }
                 }
             }
-
+            continuar();
         }
 
     }
@@ -229,6 +255,7 @@ public class StartApp {
         int opcaoTitulo;
         opcaoTitulo = sc.nextInt();
         if(opcaoTitulo == 1) {
+            //Serie
             System.out.println("Você selecionou a opção serie!\n");
             System.out.println("Informe o genero!");
             sc.nextLine();
@@ -246,8 +273,9 @@ public class StartApp {
                     }
                 }
             }
-
+            continuar();
         }
+        //Filme
         else if(opcaoTitulo == 2){
             System.out.println("Você selecionou a opção filme!\n");
             System.out.println("Informe o genero!");
@@ -266,14 +294,15 @@ public class StartApp {
                     }
                 }
             }
-
+            continuar();
         }
 
     }
-
+    //Recomendação aleatória
     public static void tituloAleatorio() {
         int opcaoTitulo;
         opcaoTitulo = sc.nextInt();
+        //Serie
         if (opcaoTitulo == 1) {
             Random random = new Random();
             for (int i = 0; i < serieList.size(); i++){
@@ -282,7 +311,7 @@ public class StartApp {
                 break;
             }
             continuar();
-
+        //Filme
         } else if (opcaoTitulo == 2) {
             Random random = new Random();
             for (int i = 0; i < filmeList.size(); i++){

@@ -90,7 +90,7 @@ public class InfoTitulo {
                 "\n Descricao: " + descricao +
                 "\n Genero: " + genero +
                 "\n Diretor: " + diretor +
-                "\n Clasificação Etaria :" + clasEtaria +
-                "\n Plataforma : " + plataforma;
+                "\n Clasificação Etaria:" + clasEtaria +
+                "\n Plataforma: " + plataforma;
     }
 }
